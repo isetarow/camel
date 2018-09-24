@@ -2,6 +2,7 @@
 <template>
   <div class="hello">
     <store-header v-bind:shopInfo=shopInfo></store-header>
+    <p>aaaaaaaaaaaaaaaaaaaaaaaa</p>
   </div>
 </template>
 

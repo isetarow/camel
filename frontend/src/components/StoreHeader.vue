@@ -8,7 +8,7 @@
             <h1>{{ shopInfo.name }}</h1>
           </div>
           <div class="store-header__title__contents__info">
-            <span><i></i>10:00 - 23:00</span>
+            <span><font-awesome-icon :icon="['far', 'clock']" />10:00 - 23:00</span>
           </div>
         </div>
       </div>
@@ -21,11 +21,11 @@ export default {
   name: 'StoreHeader',
   props: ['shopInfo']
 }
-    
 </script>
 
 <style lang="scss" scoped>
 .store-header {
+  margin-bottom: 20px;
   &__img {
     max-width: 1238px;
     height: 300px;
@@ -57,8 +57,9 @@ export default {
       background-color: #FFFFFF;
       &__name {
         -webkit-font-smoothing: antialiased;
-        height: 4.5em;
+        max-height: 4.5em;
         overflow: hidden;
+        margin-bottom: 10px;
       }
     }
   }
@@ -79,15 +80,15 @@ export default {
     &__title {
       max-width: 1238px;
       padding: 0 32px;
+      h1 {
+        line-height: 1.2em;
+        font-size: 2em;
+      }
       &__contents {
         padding: 32px;
         align-self: center;
         border-radius: 4px;
         max-width: 480px;
-        &__name {
-          line-height: 44px;
-          font-size: 36px;
-        }
       }
     }
   }
