@@ -1,20 +1,23 @@
 <template>
-  <div class="g-content">
-    <h2 class="title">Welcome to Vue world</h2>
-    <router-link to="/">Top</router-link>
-    <router-link to="/about">About</router-link>
-    <p>RouterView↓↓↓</p>
-    <router-view></router-view>
+  <div id="app">
+    <img src="./assets/logo.png">
+    <router-view/>
   </div>
 </template>
+
 <script>
+export default {
+  name: 'App'
+}
 </script>
-<style lang="scss" scoped>
-.g-content {
-  background-color: #eee;
-  .title {
-    font-size: 24px;
-    font-weight: bold;
-  }
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 </style>
