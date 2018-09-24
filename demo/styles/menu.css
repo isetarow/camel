@@ -1,0 +1,25 @@
+/* -------------------------------------------------
+ menu.css
+------------------------------------------------- */
+ .menu {
+     padding: 16px, 16px, 32px, 16px;
+     margin: 0 auto;
+     background-color: #FFFFFF;
+     max-width: 1206px;
+     display: flex;
+ }
+
+ .menu__contents {
+    min-height: 480px;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    display: flex;
+ }
+
+ @media(min-width: 769px) {
+     .menu {
+         padding: 40px 32px;
+         max-width: 1238px;
+     }
+ }
