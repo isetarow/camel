@@ -43,11 +43,14 @@ export default {
       line-height: 1.2em;
       font-size: 1.9em;
       color: #262626;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
     }
     &__contents {
       width: 100%;
       text-align: center;
-      padding: 16px 16px 8px 16px;
+      padding: 16px;
       border-radius: 2px;
       align-self: flex-end;
       box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.08);
