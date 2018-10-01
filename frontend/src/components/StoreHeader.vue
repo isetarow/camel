@@ -1,11 +1,11 @@
 <template>
-  <header class="store-header">
+  <div class="store-header">
     <!-- headerの内容を記述 -->
-    <div class="store-header__img" v-bind:style="{ backgroundImage: 'url(' + shopInfo.image + ')' }">
+    <div class="store-header__img" v-bind:style="{ backgroundImage: 'url(' + storeInfo.image + ')' }">
       <div class="store-header__title">
         <div class="store-header__title__contents">
           <div class="store-header__title__contents__name">
-            <h1>{{ shopInfo.name }}</h1>
+            <h1>{{ storeInfo.name }}</h1>
           </div>
           <div class="store-header__title__contents__info">
             <span><font-awesome-icon :icon="['far', 'clock']" />10:00 - 23:00</span>
@@ -13,13 +13,13 @@
         </div>
       </div>
     </div>
-  </header>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'StoreHeader',
-  props: ['shopInfo']
+  props: ['storeInfo']
 }
 </script>
 
