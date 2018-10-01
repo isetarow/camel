@@ -1,0 +1,442 @@
+/* -------------------------------------------------
+item.css
+------------------------------------------------- */
+
+.fade_{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 7;
+    opacity: 1;
+    background: rgba(38, 38, 38, 0.8);
+    transition: opacity 300ms ease 0s;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transition: opacity 300ms ease;
+    overflow-y: scroll;
+
+    .fade-wrapper {
+        display: flex;
+        position: relative;
+        height: 100%;
+        align-items: center;
+        -webkit-box-align: center;
+        justify-content: center;
+        -webkit-box-pack: center;
+
+        
+        .item-page {
+            @media(max-width: 768px){
+                height: 100%;
+            }
+            .item-content {
+                display: flex;
+                width: 80vw;
+                height: 600px;
+                max-width: 1200px;
+                border-radius: 4px;
+                background-color: #FFFFFF;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 25px;
+                flex-direction: row;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                overflow: hidden;
+                @media (max-width: 768px) {
+                    height: 100%;
+                    min-width: 100vw;
+                    max-height: none;
+                    margin: 0px;
+                }
+
+                @media (max-width: 1280px) and (min-width: 769px){
+                    width: 95vw;
+                }
+
+                .item-content__left {
+                    width: 50%;
+                    height: 100%;
+                    background-position: center center;
+                    background-size: cover;
+                    flex-direction: row;
+                    -webkit-box-orient: horizontal;
+                    -webkit-box-direction: normal;
+                    @media (max-width: 768px) {
+                        display: none;
+                    }
+                }
+                
+                .item-content__right {
+                    display: flex;
+                    position: relative;
+                    flex: 1;
+                    background: rgb(255, 255, 255);
+                    flex-direction: column;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+
+                    .item-inf {
+                        color: #262626;
+                        font-family: Helvetica, sans-serif;
+                        font-size: 16px;
+                        line-height: 24px;
+                        padding: 0px 24px;
+                        flex: 2 1 0%;
+                        -webkit-font-smoothing: antialiased;
+                        overflow-y: auto;
+
+                        .item-inf__img {
+                            color: #262626;
+                            font-size: 16px;
+                            height: 200px;
+                            flex-shrink: 0;
+                            margin: 0px -24px;
+                            padding: 16px 24px;
+                            background-position: center center;
+                            background-size: cover;
+                            @media (min-width: 769px) {
+                                display: none;
+                            }
+                        }
+                    
+                        .item-inf__main {
+                    
+                            .item-inf__main__header {
+                                font-size: 30px;
+                                line-height: 36px;
+                                margin: 0px 0px 24px;
+
+                                .item-inf__main__header__title {
+                                    font-size: 36px;
+                                    line-height: 44px;
+                                    margin-top: 24px;
+                                }
+                    
+                                .item-inf__main__header__description {
+                                    color: #757575;
+                                    font-size: 14px;
+                                    line-height: 20px;
+                                    margin-top: 8px;
+                                }
+                            }
+                    
+                            .item-inf__main__menu {
+                                padding-bottom: 16px;
+                    
+                                .item-inf__main__menu__header {
+                                    display: flex;
+                                    padding: 8px 24px;
+                                    justify-content: space-between;
+                                    -webkit-box-pack: justify;
+                                    align-items: center;
+                                    -webkit-box-align: center;
+                                    margin: 0px -24px 8px;
+                                    background-color: #F5F5F5;
+
+                                    .item-inf__main__menu__header__left {
+                                        display: flex;
+                                        flex-direction: column;
+                                        -webkit-box-orient: vertical;
+                                        -webkit-box-direction: normal;
+
+                                        .item-inf__main__menu__header__left__title {
+                                            font-size: 20px;
+                                        }
+                    
+                                        .item-inf__main__menu__header__left__repletion {
+                                            color: #757575;
+                                            font-size: 14px;
+                                            line-height: 20px;
+                                        }
+                                    }
+                    
+                                    .item-inf__main__menu__header__right {
+                                        display: block;
+                                        color: #FFFFFF;
+                                        font-size: 14px;
+                                        line-height: 20px;
+                                        height: 24px;
+                                        min-width: 36px;
+                                        align-items: center;
+                                        -webkit-box-align: center;
+                                        padding: 0px 8px;
+                                        border-radius: 999px;
+                                        background: rgb(117, 117, 117);
+                                        .item-inf__main__menu__header__right__text{
+                                            text-align: center;
+                                            margin: 2px 0;
+                                        }
+                                    }
+                                }
+                    
+                                .item-inf__main__menu__options {
+                    
+                                    .item-inf__main__menu__options__wrapper {
+                    
+                                        .menu-option {
+                                            padding: 12px 0px;
+
+                                            .menu-option__box {
+                                                display: flex;
+
+                                                .menu-option__box__radio {
+                                                    display: none;
+                                                    box-sizing: border-box;
+                                                    padding: 0;
+                                                    -webkit-appearance: radio;
+                                                    cursor: pointer;
+                                                }
+                                                
+                                                .menu-option__box__label {
+                                                    display: flex;
+                                                    color: #262626;
+                                                    font-size: 14px;
+                                                    line-height: 20px;
+                                                    align-items: center;
+                                                    -webkit-box-align: center;
+                                                    margin-bottom: 0px;
+                                                    -moz-osx-font-smoothing: grayscale;
+                                                    -webkit-font-smoothing: antialiased;
+                                                    cursor: pointer;
+                                                    &::before {
+                                                        content: "";
+                                                        box-sizing: border-box;
+                                                        width: 24px;
+                                                        height: 24px;
+                                                        vertical-align: middle;
+                                                        margin-right: 12px;
+                                                        flex-shrink: 0;
+                                                        border-radius: 50%;
+                                                        border-width: 4px;
+                                                        border-style: solid;
+                                                        border-color: rgb(255, 255, 255);
+                                                        border-image: initial;
+                                                        box-shadow: rgb(224, 224, 224) 0px 0px 0px 1px;
+                                                        transition: all 400ms ease 0s;
+                                                        cursor: pointer;
+                                                    }
+
+                                                    .menu-option__box__label__box {
+                                                        display: flex;
+                                                        width: 100%;
+                                                        vertical-align: middle;
+                                                        align-items: center;
+                                                        -webkit-box-align: center;
+                                                        justify-content: space-between;
+                                                        -webkit-box-pack: justify;
+                                                        -webkit-box-flex: 1;
+                                                        flex-grow: 1;
+
+                                                        .menu-option__box__label__box__sheet {
+                                                            display: flex;
+                                                            font-size: 14px;
+                                                            line-height: 20px;
+                                                            justify-content: space-between;
+                                                            -webkit-box-pack: justify;
+                                                            align-items: center;
+                                                            -webkit-box-align: center;
+
+                                                            .menu-option__box__label__box__sheet__text {
+                                                                display: flex;
+                                                                flex-direction: row;
+                                                                align-items: center;
+                                                                -webkit-box-align: center;
+                                                                -webkit-box-orient: horizontal;
+                                                                -webkit-box-direction: normal;
+                                                            }
+
+                                                            .menu-option__box__label__box__sheet__repletion {
+                                                                color: #757575;
+                                                                -moz-osx-font-smoothing: grayscale;
+                                                                -webkit-font-smoothing: antialiased;
+                                                                cursor: pointer;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .item-inf__main__bottom {
+                                color: #757575;
+                                line-height: 24px;
+                                padding: 16px 0px;
+                            }
+                        }
+                        .item-inf__form {
+                            display: flex;
+                            color: #262626;
+                            font-size: 16px;
+                            line-height: 24px;
+                            justify-content: center;
+                            -webkit-box-pack: center;
+                            flex-shrink: 0;
+                            margin: 24px 0px;
+                            @media(min-width: 576px){
+                                display: none;
+                            }
+
+                            .item-inf__form__box {
+                                display: flex;
+                                height: 52px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    .item-close {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        padding: 8px 16px 0px 0px;
+                        background-color: transparent;
+
+                        .item-close_icon {
+                            display: flex;
+                            align-items: center;
+                            -webkit-box-align: center;
+                            padding: 8px;
+                            transition: all 400ms ease;
+                            -webkit-transition: all 400ms ease;
+                            -moz-transition: all 400ms ease;
+                            border-radius: 50%;
+                            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+                            fill: #262626;
+                            background-color: #FFFFFF;
+                        }
+                    }
+                    .item-submit {
+                        z-index: 3;
+                        flex-shrink: 0;
+                        padding: 24px;
+                        box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 25px;
+                        @media (max-width: 575px) {
+                            padding: 0px;
+                        }
+
+                        .item-submit__form {
+                            display: flex;
+                            background-color: #FFFFFF;
+                            @media (max-width: 575px) {
+                                padding: 16px 24px;
+                            }
+
+                            .item-submit__form__box{
+                                display: flex;
+                                width: 100%;
+
+                                .item-submit__form__box__left {
+                                    @media (max-width: 575px) {
+                                        display: none;
+                                    }
+                                    .item-submit__form__box__left__counter {
+                                        display: flex;
+                                        color: #262626;
+                                        font-size: 16px;
+                                        height: 52px;
+                                        line-height: 24px;
+                                        text-align: center;
+                                        @media (min-width: 769px) {
+                                            -moz-osx-font-smoothing: grayscale;
+                                        }
+
+                                        @media (max-width: 575px) {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                                .item-submit__form__box__right {
+                                    flex: 1;
+                                    @media (min-width: 576px) {
+                                        margin-left: 32px;
+                                    }
+
+                                    .item-submit__form__box__right__button {
+                                        position: relative;
+                                        display: flex;
+                                        box-sizing: border-box;
+                                        fill: #FFFFFF;
+                                        color: #FFFFFF;
+                                        font-size: 14px;
+                                        line-height: 0;
+                                        text-decoration: none;
+                                        width: 100%;
+                                        height: 48px;
+                                        min-width: 120px;
+                                        align-items: center;
+                                        -webkit-box-align: center;
+                                        justify-content: center;
+                                        -webkit-box-pack: center;
+                                        padding: 8px 16px;
+                                        border-width: 1px;
+                                        border-style: solid;
+                                        border-color: rgb(62, 153, 32);
+                                        border-image: initial;
+                                        border-radius: 2px;
+                                        stroke: rgb(255, 255, 255);
+                                        background: rgb(62, 153, 32);
+                                        transition: all 400ms ease;
+                                        -webkit-transition: all 400ms ease;
+                                        -moz-transition: all 400ms ease;
+                                        -moz-osx-font-smoothing: grayscale;
+                                        -webkit-font-smoothing: antialiased;
+                                        cursor: pointer;
+
+                                        .item-submit__form__box__right__button__sheet {
+                                            width: 100%;
+                                            text-align: center;
+                                            visibility: visible;
+
+                                            .item-submit__form__box__right__button__sheet__text {
+                                                @media (max-width: 1280px) and (min-width: 769px) {
+                                                    text-align: left;
+                                                }
+                                                .item-submit__form__box__right__button__sheet__text__price {
+                                                    text-align: right;
+                                                }
+                                            }
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .counter__button {
+                        display: flex;
+                        width: 48px;
+                        height: 48px;
+                        justify-content: center;
+                        -webkit-box-pack: center;
+                        align-items: center;
+                        -webkit-box-align: center;
+                        background-color: #FFFFFF;
+                        border: 1px solid #E0E0E0;
+                        border-radius: 50%;
+                        cursor: pointer;
+                    
+                        .counter__button__symbol {
+                            fill: currentColor;
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                    
+                    .counter__count {
+                        display: flex;
+                        padding-right: 8px;
+                        padding-left: 8px;
+                        justify-content: center;
+                        -webkit-box-pack: center;
+                        align-items: center;
+                        -webkit-box-align: center;
+                        @media (min-width: 769px) {
+                            line-height: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

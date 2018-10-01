@@ -16,3 +16,66 @@ body {
 a {
   text-decoration: none;
 }
+
+button {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, input, optgroup, select, textarea {
+  font: inherit;
+  color: inherit;
+  margin: 0;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+.label, label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .02em;
+  line-height: 24px;
+  margin-bottom: 12px;
+}
+
+label {
+  cursor: default;
+}
+
+input, textarea, select, button {
+  display: inline-block;
+  font: 400 13.3333px Arial;
+  color: initial;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: start;
+  margin: 0em;
+}
+
+input, textarea, select, button, meter, progress {
+  -webkit-writing-mode: horizontal-tb !important;
+}
+
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+  box-sizing: border-box;
+  align-items: flex-start;
+  text-align: center;
+  padding: 2px 6px 3px;
+  border-width: 2px;
+  border-style: outset;
+  border-image: initial;
+  cursor: default;
+}
+
+
+
