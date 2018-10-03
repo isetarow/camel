@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="styles/reset.css" type="text/css">
+  <link rel="stylesheet" href="styles/base.css" type="text/css">
+  <link rel="stylesheet" href="styles/order.css" type="text/css">
+
+  <!--order list component用-->
+  <link rel="stylesheet" href="styles/order-list.css" type="text/css">
+</head>
+
+<body>
+  <div class ="main">
+    <h1 class="main__order-title">ご注文</h1>
+    <!-- order list component-->
+      <div class="order-contents">
+        <ul class="order-contents__list">
+          <li>
+            <div class="order-contents__list__item">
+              <div class="order-contents__list__item__left">
+                <select class="order-contents__list__item__left__select">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                </select>
+              </div>
+              <div class="order-contents__list__item__center">
+                <p class="order-contents__list__item__center__name">ハ゛イチース゛ハ゛ーカ゛ー BAI CHEESEBURGER</p>
+                <button class="order-contents__list__item__center__delete">削除する</button>
+              </div>
+              <div class="order-contents__list__item__right">
+                <span>￥250</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    <!-- order list component ここまで-->
+  </div>
+
+  <!--ここにfooterのコンポーネント入れる-->
+</body>
+</html>
