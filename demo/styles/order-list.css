@@ -17,21 +17,33 @@
     overflow-y: scroll;
 }
 
-.order-contents__list__item {
+.order-contents__list__item::before {
+    width: calc(100% - 40px);
+    border-top: 1px solid rgb(224, 224, 224);
+    margin: 0px auto;
+    content: "";
+    display: block;
+}
+
+.order-contents__list__item:first-child::before {
+    border-top: none;
+}
+
+.order-contents__list__item__box {
     padding: 16px 24px;
     justify-content: space-around;
     -webkit-box-pack: justify;
     display: flex;
 }
 
-.order-contents__list__item__left {
+.order-contents__list__item__box__left {
     margin-top: 8px;
     margin-right: 16px;
     line-height: 20px;
     position: relative;
 }
 
-.order-contents__list__item__left__select {
+.order-contents__list__item__box__left__select {
     padding: 0px 24px 0px 8px;
     border-radius: 0px;
     border-width: 1px !important;
@@ -46,7 +58,7 @@
     -webkit-font-smoothing: antialiased;
 }
 
-.order-contents__list__item__left::after {
+.order-contents__list__item__box__left::after {
     line-height: 24px;
     color: rgb(224, 224, 224);
     content: "▾";
@@ -57,7 +69,7 @@
     pointer-events: none;
 }
 
-.order-contents__list__item__center {
+.order-contents__list__item__box__center {
     width: 216px;
     flex-grow: 1;
     -webkit-box-flex: 1;
@@ -65,7 +77,7 @@
     cursor: pointer;
 }
 
-.order-contents__list__item__center__name {
+.order-contents__list__item__box__center__name {
     padding: 8px 0;
     line-height: 20px;
     color: #262626;
@@ -73,7 +85,7 @@
     font-size: 14px;
 }
 
-.order-contents__list__item__center__delete {
+.order-contents__list__item__box__center__delete {
     fill: rgb(36, 122, 0);
     background: transparent;
     line-height: 16px;
@@ -90,10 +102,16 @@
     -webkit-box-align: center;
 }
 
-.order-contents__list__item__right {
+.order-contents__list__item__box__right {
     padding: 8px 0;
     line-height: 20px;
     color: #262626;
     -webkit-font-smoothing: antialiased;
     font-size: 14px;
+}
+
+.order-contents__total {
+    margin: 10px 24px;
+    display: flex;
+    justify-content: space-between;
 }
