@@ -1,5 +1,5 @@
 <template>
-  <div class="store-header">
+  <header class="store-header">
     <!-- headerの内容を記述 -->
     <div class="store-header__img" v-bind:style="{ backgroundImage: 'url(' + storeInfo.image + ')' }">
       <div class="store-header__title">
@@ -13,7 +13,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
