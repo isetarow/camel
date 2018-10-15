@@ -1,7 +1,7 @@
 /* -------------------------------------------------
  item.css
 ------------------------------------------------- */
-.fade_ {
+.fade {
   position: fixed;
   top: 0;
   right: 0;
@@ -51,7 +51,7 @@
     display: flex;
     position: relative;
     flex: 1;
-    background: white;
+    background: #ffffff;
     flex-direction: column;
     -webkit-box-orient: vertical;
     overflow: hidden; }
@@ -76,22 +76,22 @@
     @media (min-width: 769px) {
       .item-info .item-info__img {
         display: none; } }
-  .item-info .item-info__main .order-header {
+  .item-info .item-info__main .item-header {
     font-size: 30px;
     line-height: 36px;
     margin: 0px 0px 24px; }
-    .item-info .item-info__main .order-header .order-header__title {
+    .item-info .item-info__main .item-header .item-header__title {
       font-size: 36px;
       line-height: 44px;
       margin-top: 24px; }
-    .item-info .item-info__main .order-header .order-header__description {
+    .item-info .item-info__main .item-header .item-header__description {
       color: #757575;
       font-size: 14px;
       line-height: 20px;
       margin-top: 8px; }
-  .item-info .item-info__main .order-menu {
+  .item-info .item-info__main .item-menu {
     padding-bottom: 16px; }
-    .item-info .item-info__main .order-menu .order-menu__header {
+    .item-info .item-info__main .item-menu .item-menu__header {
       display: flex;
       padding: 8px 24px;
       justify-content: space-between;
@@ -100,28 +100,28 @@
       -webkit-box-align: center;
       margin: 0px -24px 8px;
       background-color: #F5F5F5; }
-      .item-info .item-info__main .order-menu .order-menu__header .order-menu__header__left .order-menu__header__left__title {
+      .item-info .item-info__main .item-menu .item-menu__header .item-menu__header__left .item-menu__header__left__title {
         font-size: 20px; }
-      .item-info .item-info__main .order-menu .order-menu__header .order-menu__header__left .order-menu__header__left__repletion {
+      .item-info .item-info__main .item-menu .item-menu__header .item-menu__header__left .item-menu__header__left__repletion {
         color: #757575;
         font-size: 14px;
         line-height: 20px; }
-      .item-info .item-info__main .order-menu .order-menu__header .order-menu__header__right {
+      .item-info .item-info__main .item-menu .item-menu__header .item-menu__header__right {
         color: #FFFFFF;
         font-size: 14px;
         line-height: 24px;
         height: 24px;
-        min-width: 36px;
+        min-width: 3.2em;
         padding: 0px 8px;
         border-radius: 999px;
         background: #757575;
         text-align: center; }
-    .item-info .item-info__main .order-menu .order-menu__content .order-menu__content__option {
+    .item-info .item-info__main .item-menu .item-menu__content .item-menu__content__option {
       padding: 12px 0px;
       display: flex; }
-      .item-info .item-info__main .order-menu .order-menu__content .order-menu__content__option .order-menu__content__option__radio {
+      .item-info .item-info__main .item-menu .item-menu__content .item-menu__content__option .item-menu__content__option__radio {
         display: none; }
-      .item-info .item-info__main .order-menu .order-menu__content .order-menu__content__option .order-menu__content__option__label {
+      .item-info .item-info__main .item-menu .item-menu__content .item-menu__content__option .item-menu__content__option__label {
         display: flex;
         color: #262626;
         font-size: 14px;
@@ -131,7 +131,7 @@
         margin-bottom: 0px;
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased; }
-        .item-info .item-info__main .order-menu .order-menu__content .order-menu__content__option .order-menu__content__option__label::before {
+        .item-info .item-info__main .item-menu .item-menu__content .item-menu__content__option .item-menu__content__option__label::before {
           content: "";
           box-sizing: border-box;
           width: 24px;
@@ -142,22 +142,22 @@
           border-radius: 50%;
           border-width: 4px;
           border-style: solid;
-          border-color: white;
+          border-color: #ffffff;
           border-image: initial;
           box-shadow: #e0e0e0 0px 0px 0px 1px;
           transition: all 400ms ease 0s;
           cursor: pointer; }
-        .item-info .item-info__main .order-menu .order-menu__content .order-menu__content__option .order-menu__content__option__label.is-selected::before {
+        .item-info .item-info__main .item-menu .item-menu__content .item-menu__content__option .item-menu__content__option__label.is-selected::before {
           background-color: #3e9920; }
-        .item-info .item-info__main .order-menu .order-menu__content .order-menu__content__option .order-menu__content__option__label .order-menu__content__option__label__repletion {
+        .item-info .item-info__main .item-menu .item-menu__content .item-menu__content__option .item-menu__content__option__label .item-menu__content__option__label__repletion {
           color: #757575; }
-  .item-info .item-info__main .order-repletion {
+  .item-info .item-info__main .item-repletion {
     color: #757575;
     line-height: 24px;
     padding: 16px 0px; }
-    .item-info .item-info__main .order-repletion .order-repletion__text {
+    .item-info .item-info__main .item-repletion .item-repletion__text {
       font-family: M1, inherit; }
-      .item-info .item-info__main .order-repletion .order-repletion__text .order-repletion__text__link {
+      .item-info .item-info__main .item-repletion .item-repletion__text .item-repletion__text__link {
         color: #61ad5f; }
   .item-info .item-info__form {
     display: flex;
@@ -242,7 +242,8 @@
           right: 0; }
 
 .counter {
-  display: flex; }
+  display: flex;
+  height: 52px; }
   .counter .counter__button {
     display: flex;
     width: 48px;

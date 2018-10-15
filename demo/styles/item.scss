@@ -2,7 +2,7 @@
  item.css
 ------------------------------------------------- */
 
-.fade_{
+.fade{
     position: fixed;
     top: 0;
     right: 0;
@@ -56,7 +56,7 @@
         display: flex;
         position: relative;
         flex: 1;
-        background: rgb(255, 255, 255);
+        background:#ffffff;
         flex-direction: column;
         -webkit-box-orient: vertical;
         overflow: hidden;
@@ -87,18 +87,18 @@
     }
 
     .item-info__main {
-        .order-header {
+        .item-header {
             font-size: 30px;
             line-height: 36px;
             margin: 0px 0px 24px;
 
-            .order-header__title {
+            .item-header__title {
                 font-size: 36px;
                 line-height: 44px;
                 margin-top: 24px;
             }
 
-            .order-header__description {
+            .item-header__description {
                 color: #757575;
                 font-size: 14px;
                 line-height: 20px;
@@ -106,10 +106,10 @@
             }
         }
 
-        .order-menu {
+        .item-menu {
             padding-bottom: 16px;
 
-            .order-menu__header {
+            .item-menu__header {
                 display: flex;
                 padding: 8px 24px;
                 justify-content: space-between;
@@ -119,41 +119,41 @@
                 margin: 0px -24px 8px;
                 background-color: #F5F5F5;
 
-                .order-menu__header__left {
+                .item-menu__header__left {
 
-                    .order-menu__header__left__title {
+                    .item-menu__header__left__title {
                         font-size: 20px;
                     }
 
-                    .order-menu__header__left__repletion {
+                    .item-menu__header__left__repletion {
                         color: #757575;
                         font-size: 14px;
                         line-height: 20px;
                     }
                 }
 
-                .order-menu__header__right {
+                .item-menu__header__right {
                     color: #FFFFFF;
                     font-size: 14px;
                     line-height: 24px;
                     height: 24px;
-                    min-width: 36px;
+                    min-width: 3.2em;
                     padding: 0px 8px;
                     border-radius: 999px;
-                    background: rgb(117, 117, 117);
+                    background: #757575;
                     text-align: center;
                 }
             }
 
-            .order-menu__content {
-                .order-menu__content__option {
+            .item-menu__content {
+                .item-menu__content__option {
                     padding: 12px 0px;
                     display: flex;
 
-                    .order-menu__content__option__radio {
+                    .item-menu__content__option__radio {
                         display: none;
                     }
-                    .order-menu__content__option__label {
+                    .item-menu__content__option__label {
                         display: flex;
                         color: #262626;
                         font-size: 14px;
@@ -174,18 +174,18 @@
                             border-radius: 50%;
                             border-width: 4px;
                             border-style: solid;
-                            border-color: rgb(255, 255, 255);
+                            border-color: #ffffff;
                             border-image: initial;
-                            box-shadow: rgb(224, 224, 224) 0px 0px 0px 1px;
+                            box-shadow: #e0e0e0 0px 0px 0px 1px;
                             transition: all 400ms ease 0s;
                             cursor: pointer;
                         }
                         
                         &.is-selected::before{
-                            background-color: rgb(62, 153, 32);
+                            background-color: #3e9920;
                         }
 
-                        .order-menu__content__option__label__repletion {
+                        .item-menu__content__option__label__repletion {
                             color: #757575;
                         }
                     }
@@ -193,15 +193,15 @@
             }
         }
 
-        .order-repletion {
+        .item-repletion {
             color: #757575;
             line-height: 24px;
             padding: 16px 0px;
 
-            .order-repletion__text {
+            .item-repletion__text {
                 font-family: M1, inherit;
 
-                .order-repletion__text__link {
+                .item-repletion__text__link {
                     color:#61ad5f;
                 }
             }
@@ -282,9 +282,9 @@
             padding: 8px 16px;
             border-width: 1px;
             border-style: solid;
-            border-color: rgb(62, 153, 32);
+            border-color: #3e9920;
             border-radius: 2px;
-            background: rgb(62, 153, 32);
+            background: #3e9920;
             transition: all 400ms ease;
             -webkit-transition: all 400ms ease;
             -moz-transition: all 400ms ease;
@@ -311,6 +311,7 @@
 
 .counter {
     display: flex;
+    height: 52px;
 
     .counter__button {
         display: flex;
