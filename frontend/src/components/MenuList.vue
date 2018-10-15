@@ -58,6 +58,9 @@
           font-weight: 400;
         }
       }
+      &__items {
+        list-style:none;
+      }
     }
   }
 </style>
