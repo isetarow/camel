@@ -9,7 +9,6 @@
         <li><a href="#">定食</a></li>
         <li><a href="#">単品</a></li>
         <li><a href="#">ドリンク</a></li>
-        <li><a href="#">{{test}}</a></li>
       </ul>
     </nav>
   </header>
@@ -20,7 +19,7 @@
     name: 'GlobalNav',
     computed: {
       scrollY() { return this.$window.scrollY },
-      fixedAfterLogo() { 
+      fixedAfterLogo() {
         return this.scrollY > 60 ? { position: 'fixed', top: 0 } : {}
       },
     },
