@@ -4,6 +4,7 @@
     <global-nav></global-nav>
     <store-header v-bind:storeInfo=storeInfo></store-header>
     <menu-list v-bind:menues=menues></menu-list>
+    <item-content v-bind:itemId=itemId></item-content>
   </div>
 </template>
 
@@ -11,17 +12,19 @@
 import StoreHeader from '@/components/StoreHeader'
 import MenuList from '@/components/MenuList'
 import GlobalNav from '@/components/GlobalNav'
+import ItemContent from '@/components/ItemContent'
 
 export default {
   name: 'StoreTop',
-  components: { StoreHeader, MenuList, GlobalNav },
+  components: { StoreHeader, MenuList, GlobalNav,ItemContent },
   data () {
     return {
       storeInfo: {
         image: 'https://picsum.photos/2048/1200?image=995',
         name: 'ルノアール六本木店あああああああああああああああいうえおかきくけこ'
       },
-      menues: []
+      menues: [],
+      itemId:99,
     }
   }
 }
