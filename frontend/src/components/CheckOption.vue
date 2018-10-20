@@ -8,7 +8,7 @@
       <div v-if="option.isSoldOut" class="check-option__soldout">
         売り切れ
       </div>
-      <div v-if="option.additionalCosts>0" class="check-option__repletion">
+      <div v-else-if="option.additionalCosts>0" class="check-option__repletion">
         + ￥{{ option.additionalCosts }}
       </div>
       <div v-else-if="option.additionalCosts<0" class="radio-option__repletion">
