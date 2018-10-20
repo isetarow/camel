@@ -1,0 +1,21 @@
+/* -------------------------------------------------
+ order.css
+------------------------------------------------- */
+.main {
+    flex-direction: column;
+    display: flex;
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 16px;
+}
+
+.main__order-title {
+    padding: 48px 0px;
+    line-height: 48px;
+    font-size: 40px;
+    color: #262626;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 200;
+}
