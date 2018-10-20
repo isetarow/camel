@@ -2,9 +2,9 @@
 <template>
   <div class="store-top">
     <logo/>
-    <global-nav/>
-    <store-header v-bind:storeInfo=storeInfo />
-    <menu-list v-bind:menues=menues />
+    <global-nav :categories=categories />
+    <store-header :storeInfo=storeInfo />
+    <menu-list :menues=menues />
   </div>
 </template>
 
@@ -13,9 +13,9 @@
   import MenuList from '@/components/MenuList'
   import GlobalNav from '@/components/GlobalNav'
   import Logo from '@/components/Logo'
-
+  
   // mock data
-  import storeTopData from '@/mockData/StoreTopData'
+  import storeTopData from '@/mockData/StoreInfo'
   
   export default {
     name: 'StoreTop',
@@ -27,7 +27,7 @@
     },
     data() {
       return {
-        ...storeTopData
+        ...storeInfo
       }
     }
   }
@@ -35,4 +35,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+  
 </style>

@@ -1,10 +1,9 @@
 <template>
   <nav>
     <ul>
-      <li><a href="#">お勧め</a></li>
-      <li><a href="#">定食</a></li>
-      <li><a href="#">単品</a></li>
-      <li><a href="#">ドリンク</a></li>
+      <li v-for="category in sortedCategory" :key=category.id>
+        <a :href="category.id">{{ category.name }}</a>
+      </li>
     </ul>
   </nav>
 </template>
@@ -12,11 +11,19 @@
 <script>
   export default {
     name: 'GlobalNav',
+    props: ['categories'],
+    computed: {
+      sortedCategory: () => {
+        return this.categories
+      }
+    }
   }
 </script>
 
 <style lang="scss" scoped>
   nav {
+    white-space: nowrap;
+    overflow-y: scroll;
     background-color: #666;
     color: white;
     max-width: 1238px;
