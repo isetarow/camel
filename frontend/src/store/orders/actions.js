@@ -1,6 +1,8 @@
 import * as types from "../mutationType";
 import router from "../../router";
 
+// うごかないよ
+
 export default {
   addOrder: ({ state, commit }, value) => {
     commit(types.addOrder, value);
