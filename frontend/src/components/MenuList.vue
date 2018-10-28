@@ -11,6 +11,54 @@
         <li class="menu-list__category__item">クラブハウスサンド</li>
         <li class="menu-list__category__item">パンケーキ</li>
         <li class="menu-list__category__item">コーヒー</li>
+        <li class="menu-list__category__item">クラブハウスサンド</li>
+        <li class="menu-list__category__item">パンケーキ</li>
+        <li class="menu-list__category__item">コーヒー</li>
+        <li class="menu-list__category__item">クラブハウスサンド</li>
+        <li class="menu-list__category__item">パンケーキ</li>
+        <li class="menu-list__category__item">コーヒー</li>
+        <li class="menu-list__category__item">クラブハウスサンド</li>
+        <li class="menu-list__category__item">パンケーキ</li>
+        <li class="menu-list__category__item">コーヒー</li>
+        <li class="menu-list__category__item">クラブハウスサンド</li>
+        <li class="menu-list__category__item">パンケーキ</li>
+        <li class="menu-list__category__item">コーヒー</li>
+        <li class="menu-list__category__item">クラブハウスサンド</li>
+        <li class="menu-list__category__item">パンケーキ</li>
+        <li class="menu-list__category__item">コーヒー</li>
+        <li class="menu-list__category__item">クラブハウスサンド</li>
+        <li class="menu-list__category__item">パンケーキ</li>
+        <li class="menu-list__category__item">コーヒー</li>
+        <li class="menu-list__category__item">クラブハウスサンド</li>
+        <li class="menu-list__category__item">パンケーキ</li>
+        <li class="menu-list__category__item">コーヒー</li>
+        <li class="menu-list__category__item">クラブハウスサンド</li>
+        <li class="menu-list__category__item">パンケーキ</li>
+        <li class="menu-list__category__item">コーヒー</li>
+        <li class="menu-list__category__item">クラブハウスサンド</li>
+        <li class="menu-list__category__item">パンケーキ</li>
+        <li class="menu-list__category__item">コーヒー</li>
+        <li class="menu-list__category__item">クラブハウスサンド</li>
+        <li class="menu-list__category__item">パンケーキ</li>
+        <li class="menu-list__category__item">コーヒー</li>
+        <li class="menu-list__category__item">クラブハウスサンド</li>
+        <li class="menu-list__category__item">パンケーキ</li>
+        <li class="menu-list__category__item">コーヒー</li>
+        <li class="menu-list__category__item">クラブハウスサンド</li>
+        <li class="menu-list__category__item">パンケーキ</li>
+        <li class="menu-list__category__item">コーヒー</li>
+        <li class="menu-list__category__item">クラブハウスサンド</li>
+        <li class="menu-list__category__item">パンケーキ</li>
+        <li class="menu-list__category__item">コーヒー</li>
+        <li class="menu-list__category__item">クラブハウスサンド</li>
+        <li class="menu-list__category__item">パンケーキ</li>
+        <li class="menu-list__category__item">コーヒー</li>
+        <li class="menu-list__category__item">クラブハウスサンド</li>
+        <li class="menu-list__category__item">パンケーキ</li>
+        <li class="menu-list__category__item">コーヒー</li>
+        <li class="menu-list__category__item">クラブハウスサンド</li>
+        <li class="menu-list__category__item">パンケーキ</li>
+        <li class="menu-list__category__item">コーヒー</li>
       </ul>
     </div>
     <div class="menu-list__category">
@@ -34,7 +82,7 @@
 <script>
   export default {
     name: 'MenuList',
-    props: ['menues']
+    props: ['items']
   }
 </script>
 

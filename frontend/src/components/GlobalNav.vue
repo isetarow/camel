@@ -1,63 +1,50 @@
 <template>
-  <header class="global-nav">
-    <div class="logo">
-      <img v-bind:src="require('../assets/logo.png')">
-    </div>
-    <nav v-bind:style="fixedAfterLogo">
-      <ul>
-        <li><a href="#">お勧め</a></li>
-        <li><a href="#">定食</a></li>
-        <li><a href="#">単品</a></li>
-        <li><a href="#">ドリンク</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav>
+    <ul>
+      <li v-for="category in sortedCategory" :key=category.id>
+        <a :href="category.id">{{ category.name }}</a>
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <script>
   export default {
     name: 'GlobalNav',
+    props: ['categories'],
     computed: {
-      scrollY() { return this.$window.scrollY },
-      fixedAfterLogo() {
-        return this.scrollY > 60 ? { position: 'fixed', top: 0 } : {}
-      },
-    },
+      sortedCategory: function() {
+        return this.categories
+      }
+    }
   }
 </script>
 
 <style lang="scss" scoped>
-  .global-nav {
-    .logo {
-      height: 60px;
+  nav {
+    white-space: nowrap;
+    overflow-y: scroll;
+    background-color: #666;
+    color: white;
+    max-width: 1238px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    ul {
       display: flex;
       justify-content: center;
-      align-items: center;
-      img {
-        height: 40px;
-      }
+      flex-flow: row;
+      margin: 0;
+      list-style-type: none;
     }
-    nav {
-      background-color: #666;
+    a {
+      display: block;
+      padding: 12px 24px;
       color: white;
-      max-width: 1238px;
-      width: 100%;
-      ul {
-        display: flex;
-        justify-content: center;
-        flex-flow: row;
-        margin: 0;
-        list-style-type: none;
-      }
-      a {
-        display: block;
-        padding: 12px 24px;
-        color: white;
-        text-decoration: none;
-      }
-      li a:hover {
-        background-color: #8cae47;
-      }
+      text-decoration: none;
+    }
+    li a:hover {
+      background-color: #8cae47;
     }
   }
 </style>

@@ -1,30 +1,30 @@
 <template>
-  <div class="store-header">
+  <header class="shop-header">
     <!-- headerの内容を記述 -->
-    <div class="store-header__img" v-bind:style="{ backgroundImage: 'url(' + storeInfo.image + ')' }">
-      <div class="store-header__title">
-        <div class="store-header__title__contents">
-          <div class="store-header__title__contents__name">
-            <h1>{{ storeInfo.name }}</h1>
+    <div class="shop-header__img" v-bind:style="{ backgroundImage: 'url(' + shopDetail.image + ')' }">
+      <div class="shop-header__title">
+        <div class="shop-header__title__contents">
+          <div class="shop-header__title__contents__name">
+            <h1>{{ shopDetail.name }}</h1>
           </div>
-          <div class="store-header__title__contents__info">
+          <div class="shop-header__title__contents__info">
             <span><font-awesome-icon :icon="['far', 'clock']" />10:00 - 23:00</span>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
 export default {
-  name: 'StoreHeader',
-  props: ['storeInfo']
+  name: 'ShopHeader',
+  props: ['shopDetail'],
 }
 </script>
 
 <style lang="scss" scoped>
-.store-header {
+.shop-header {
   margin-bottom: 20px;
   &__img {
     max-width: 1238px;
@@ -75,7 +75,7 @@ export default {
 // }
 
 @media (min-width: 769px) {
-  .store-header {
+  .shop-header {
     &__img{
       height: 364px;
       box-shadow: rgb(255, 255, 255) 0px -22px 0px 0px inset;

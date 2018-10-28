@@ -3,9 +3,10 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
   state: {
-
+    storeInfo: [],
+    order: []
   },
   mutations: {
 
@@ -14,3 +15,5 @@ export default new Vuex.Store({
 
   },
 });
+
+export default store;
