@@ -38,42 +38,42 @@ let shop = {
       image: "https://d1ralsognjng37.cloudfront.net/ef3a92bb-5cbf-4a71-b8e9-888822c2330e"
     },
     2: {
-      categoryId: 1,
+      categoryId: [1],
       categoryName: "お勧め",
       itemName: 'クラブハウスサンド',
       price: 1200,
       image: "https://d1ralsognjng37.cloudfront.net/ef3a92bb-5cbf-4a71-b8e9-888822c2330e"
     },
     3: {
-      categoryId: 1,
+      categoryId: [1],
       categoryName: "お勧め",
       itemName: 'うすうす',
       price: 100,
       image: "https://d1ralsognjng37.cloudfront.net/ef3a92bb-5cbf-4a71-b8e9-888822c2330e"
     },
     4: {
-      categoryId: 2,
+      categoryId: [2],
       categoryName: "定食",
       itemName: '女王様セット',
       price: 1000,
       image: "https://d1ralsognjng37.cloudfront.net/ef3a92bb-5cbf-4a71-b8e9-888822c2330e"
     },
     5: {
-      categoryId: 2,
+      categoryId: [2],
       categoryName: "定食",
       itemName: '女王様セット2',
       price: 1200,
       image: "https://d1ralsognjng37.cloudfront.net/ef3a92bb-5cbf-4a71-b8e9-888822c2330e"
     },
     6: {
-      categoryId: 3,
+      categoryId: [3],
       categoryName: "ドリンク",
       itemName: '水出しアイスコーヒー',
       price: 700,
       image: "https://d1ralsognjng37.cloudfront.net/ef3a92bb-5cbf-4a71-b8e9-888822c2330e"
     },
     7: {
-      categoryId: 4,
+      categoryId: [4],
       categoryName: "単品",
       itemName: 'バイブ',
       price: 100,
