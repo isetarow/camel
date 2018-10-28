@@ -1,4 +1,4 @@
-const order = {
+let order = {
   total: 1300,
   tableNo: 1,
   items: [

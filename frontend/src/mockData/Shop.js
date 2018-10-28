@@ -1,4 +1,4 @@
-const shopInfo = {
+let shop = {
   shopDetail: {
     image: 'https://picsum.photos/2048/1200?image=995',
     name: 'ルノアール六本木店あああああああああああああああいうえおかきくけこ',
@@ -82,4 +82,4 @@ const shopInfo = {
   }
 }
 
-export default shopInfo;
+export default shop;

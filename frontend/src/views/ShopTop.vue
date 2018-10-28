@@ -15,7 +15,7 @@
   import Logo from '@/components/Logo'
   
   // mock data
-  import shopInfo from '@/mockData/ShopInfo'
+  import shop from '@/mockData/Shop'
   
   export default {
     name: 'ShopTop',
@@ -27,7 +27,7 @@
     },
     data() {
       return {
-        ...shopInfo
+        ...shop
       }
     }
   }
