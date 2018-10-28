@@ -1,4 +1,4 @@
-let order = {
+let orders = {
   total: 1300,
   tableNo: 1,
   items: [
@@ -26,4 +26,4 @@ let order = {
   ]
 }
 
-export default order;
+export default orders;

@@ -7,9 +7,7 @@ import shop from "@/mockData/Shop"
 export default {
   namespaced: true,
   state: {
-    shop: [
-      ...shop
-    ],
+    ...shop
   },
   getters,
   mutations,

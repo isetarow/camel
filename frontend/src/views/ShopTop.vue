@@ -9,6 +9,8 @@
 </template>
 
 <script>
+  import { mapState, mapActions } from 'vuex'
+
   import ShopHeader from '@/components/ShopHeader'
   import MenuList from '@/components/MenuList'
   import GlobalNav from '@/components/GlobalNav'
@@ -25,10 +27,16 @@
       GlobalNav,
       Logo
     },
-    data() {
-      return {
-        ...shop
-      }
+    computed: {
+      ...mapState('shop', [
+        'shopDetail',
+        'categories',
+        'items',
+      ])
+    },
+    methods: {
+      ...mapActions('some/nested/module', [
+      ])
     }
   }
 </script>
