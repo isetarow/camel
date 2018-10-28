@@ -1,5 +1,5 @@
-const storeInfo = {
-  storeDetail: {
+const shopInfo = {
+  shopDetail: {
     image: 'https://picsum.photos/2048/1200?image=995',
     name: 'ルノアール六本木店あああああああああああああああいうえおかきくけこ',
     geolocation: {
@@ -82,4 +82,4 @@ const storeInfo = {
   }
 }
 
-export default storeInfo;
+export default shopInfo;

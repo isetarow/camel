@@ -13,7 +13,7 @@
     name: 'GlobalNav',
     props: ['categories'],
     computed: {
-      sortedCategory: function () {
+      sortedCategory: function() {
         return this.categories
       }
     }

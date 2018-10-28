@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import StoreTop from '@/views/StoreTop'
+import ShopTop from '@/views/ShopTop'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faClock } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -14,9 +14,9 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 export default new Router({
   routes: [
     {
-      path: '/stores/:id',
-      name: 'storeTop',
-      component: StoreTop
+      path: '/shops/:id',
+      name: 'shopTop',
+      component: ShopTop
     }
   ]
 })

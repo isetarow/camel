@@ -1,33 +1,33 @@
 
 <template>
-  <div class="store-top">
+  <div class="shop-top">
     <logo/>
     <global-nav :categories=categories />
-    <store-header :storeDetail=storeDetail />
+    <shop-header :shopDetail=shopDetail />
     <menu-list :items=items />
   </div>
 </template>
 
 <script>
-  import StoreHeader from '@/components/StoreHeader'
+  import ShopHeader from '@/components/ShopHeader'
   import MenuList from '@/components/MenuList'
   import GlobalNav from '@/components/GlobalNav'
   import Logo from '@/components/Logo'
   
   // mock data
-  import storeInfo from '@/mockData/StoreInfo'
+  import shopInfo from '@/mockData/ShopInfo'
   
   export default {
-    name: 'StoreTop',
+    name: 'ShopTop',
     components: {
-      StoreHeader,
+      ShopHeader,
       MenuList,
       GlobalNav,
       Logo
     },
     data() {
       return {
-        ...storeInfo
+        ...shopInfo
       }
     }
   }
