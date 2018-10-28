@@ -4,7 +4,7 @@
     <logo/>
     <global-nav :categories=categories />
     <shop-header :shopDetail=shopDetail />
-    <menu-list :items=items />
+    <menu-list :items=items  :categories=categories />
   </div>
 </template>
 
@@ -15,10 +15,10 @@
   import MenuList from '@/components/MenuList'
   import GlobalNav from '@/components/GlobalNav'
   import Logo from '@/components/Logo'
-  
+
   // mock data
   import shop from '@/mockData/Shop'
-  
+
   export default {
     name: 'ShopTop',
     components: {
@@ -43,5 +43,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-  
+
 </style>

@@ -3,86 +3,31 @@
     <div class="menu-list__header">
       <span class="menu-list__header__title">メニュー Menu</span>
     </div>
-    <div class="menu-list__category">
-      <div class="menu-list__category__name">
-        <h2>お勧め</h2>
-      </div>
-      <ul class="menu-list__category__items">
-        <li class="menu-list__category__item">クラブハウスサンド</li>
-        <li class="menu-list__category__item">パンケーキ</li>
-        <li class="menu-list__category__item">コーヒー</li>
-        <li class="menu-list__category__item">クラブハウスサンド</li>
-        <li class="menu-list__category__item">パンケーキ</li>
-        <li class="menu-list__category__item">コーヒー</li>
-        <li class="menu-list__category__item">クラブハウスサンド</li>
-        <li class="menu-list__category__item">パンケーキ</li>
-        <li class="menu-list__category__item">コーヒー</li>
-        <li class="menu-list__category__item">クラブハウスサンド</li>
-        <li class="menu-list__category__item">パンケーキ</li>
-        <li class="menu-list__category__item">コーヒー</li>
-        <li class="menu-list__category__item">クラブハウスサンド</li>
-        <li class="menu-list__category__item">パンケーキ</li>
-        <li class="menu-list__category__item">コーヒー</li>
-        <li class="menu-list__category__item">クラブハウスサンド</li>
-        <li class="menu-list__category__item">パンケーキ</li>
-        <li class="menu-list__category__item">コーヒー</li>
-        <li class="menu-list__category__item">クラブハウスサンド</li>
-        <li class="menu-list__category__item">パンケーキ</li>
-        <li class="menu-list__category__item">コーヒー</li>
-        <li class="menu-list__category__item">クラブハウスサンド</li>
-        <li class="menu-list__category__item">パンケーキ</li>
-        <li class="menu-list__category__item">コーヒー</li>
-        <li class="menu-list__category__item">クラブハウスサンド</li>
-        <li class="menu-list__category__item">パンケーキ</li>
-        <li class="menu-list__category__item">コーヒー</li>
-        <li class="menu-list__category__item">クラブハウスサンド</li>
-        <li class="menu-list__category__item">パンケーキ</li>
-        <li class="menu-list__category__item">コーヒー</li>
-        <li class="menu-list__category__item">クラブハウスサンド</li>
-        <li class="menu-list__category__item">パンケーキ</li>
-        <li class="menu-list__category__item">コーヒー</li>
-        <li class="menu-list__category__item">クラブハウスサンド</li>
-        <li class="menu-list__category__item">パンケーキ</li>
-        <li class="menu-list__category__item">コーヒー</li>
-        <li class="menu-list__category__item">クラブハウスサンド</li>
-        <li class="menu-list__category__item">パンケーキ</li>
-        <li class="menu-list__category__item">コーヒー</li>
-        <li class="menu-list__category__item">クラブハウスサンド</li>
-        <li class="menu-list__category__item">パンケーキ</li>
-        <li class="menu-list__category__item">コーヒー</li>
-        <li class="menu-list__category__item">クラブハウスサンド</li>
-        <li class="menu-list__category__item">パンケーキ</li>
-        <li class="menu-list__category__item">コーヒー</li>
-        <li class="menu-list__category__item">クラブハウスサンド</li>
-        <li class="menu-list__category__item">パンケーキ</li>
-        <li class="menu-list__category__item">コーヒー</li>
-        <li class="menu-list__category__item">クラブハウスサンド</li>
-        <li class="menu-list__category__item">パンケーキ</li>
-        <li class="menu-list__category__item">コーヒー</li>
-      </ul>
-    </div>
-    <div class="menu-list__category">
-      <div class="menu-list__category__name">
-        <h2>定食</h2>
-      </div>
-    </div>
-    <div class="menu-list__category">
-      <div class="menu-list__category__name">
-        <h2>単品</h2>
-      </div>
-    </div>
-    <div class="menu-list__category">
-      <div class="menu-list__category__name">
-        <h2>ドリンク</h2>
-      </div>
-    </div>
+    <ul class="menu-list__category">
+      <li v-for="category in sortedCategory" :key=category.id class="menu-list__category__name">
+        <h2>{{ category.name }}</h2>
+        <ul class="menu-list__category__items">
+          <li v-for="item in filtedItem" :key=item.id class="menu-list__category__item">{{item.itemName}}</li>
+        </ul>
+      </li>
+    </ul>
   </section>
 </template>
 
 <script>
   export default {
     name: 'MenuList',
-    props: ['items']
+    props: ['items', 'categories'],
+    computed: {
+      sortedCategory: function() {
+        return this.categories
+      },
+      filtedItem: function() {
+        return Object.values(this.items).filter(function (item) {
+          return item.categoryId.includes(1)
+        })
+      }
+    }
   }
 </script>
 
