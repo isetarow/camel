@@ -82,7 +82,7 @@
 <script>
   export default {
     name: 'MenuList',
-    props: ['menues']
+    props: ['items']
   }
 </script>
 

@@ -3,8 +3,8 @@
   <div class="store-top">
     <logo/>
     <global-nav :categories=categories />
-    <store-header :storeInfo=storeInfo />
-    <menu-list :menues=menues />
+    <store-header :storeDetail=storeDetail />
+    <menu-list :items=items />
   </div>
 </template>
 
@@ -15,7 +15,7 @@
   import Logo from '@/components/Logo'
   
   // mock data
-  import storeTopData from '@/mockData/StoreInfo'
+  import storeInfo from '@/mockData/StoreInfo'
   
   export default {
     name: 'StoreTop',

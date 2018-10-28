@@ -1,9 +1,11 @@
 const storeInfo = {
-  image: 'https://picsum.photos/2048/1200?image=995',
-  name: 'ルノアール六本木店あああああああああああああああいうえおかきくけこ',
-  geolocation: {
-    'lat': 111.222222,
-    'lng': 222.111111,
+  storeDetail: {
+    image: 'https://picsum.photos/2048/1200?image=995',
+    name: 'ルノアール六本木店あああああああああああああああいうえおかきくけこ',
+    geolocation: {
+      'lat': 111.222222,
+      'lng': 222.111111,
+    }
   },
   categories: [
     {
@@ -80,4 +82,4 @@ const storeInfo = {
   }
 }
 
-export default storInfo;
+export default storeInfo;
