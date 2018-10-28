@@ -23,7 +23,7 @@
 <script>
   export default {
     name: 'MenuList',
-    props: ['items', 'categories', ''],
+    props: ['items', 'categories'],
     computed: {
       sortedCategory: function() {
         return this.categories
