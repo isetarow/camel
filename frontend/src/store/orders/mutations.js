@@ -2,17 +2,18 @@ import * as types from "../mutationType";
 
 export default {
   [types.addOrder](state, payload) {
-    state.orders.push(payload);
+    state.items = payload.items
+    state.total = payload.total
   },
   [types.deleteOrder](state, payload) {
-    state.orders = payload;
+    state.items = payload
   },
   [types.updateOrder](state, payload) {
-    const pos = state.orders
-      .map(order => {
-        return order.id;
+    const pos = state.items
+      .map(item => {
+        return item.id
       })
-      .indexOf(payload.id);
-    state.orders[pos] = payload;
+      .indexOf(payload.id)
+    state.items[pos] = payload
   }
 };
