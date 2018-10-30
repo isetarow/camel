@@ -13,7 +13,7 @@
     name: 'GlobalNav',
     props: ['categories'],
     computed: {
-      sortedCategory: () => {
+      sortedCategory: function() {
         return this.categories
       }
     }
@@ -23,7 +23,7 @@
 <style lang="scss" scoped>
   nav {
     white-space: nowrap;
-    overflow-y: scroll;
+    overflow-y: hidden;
     background-color: #666;
     color: white;
     max-width: 1238px;

@@ -1,17 +1,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+import shop from './shop'
+import orders from './orders'
+
 Vue.use(Vuex)
 
-export default new Vuex.Store({
-  state: {
-    storeInfo: [],
-    order: []
-  },
-  mutations: {
-
-  },
-  actions: {
-
-  },
+const store = new Vuex.Store({
+  modules: {
+    shop,
+    orders
+  }
 });
+
+export default store;
