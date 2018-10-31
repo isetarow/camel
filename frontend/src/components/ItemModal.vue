@@ -18,12 +18,12 @@
     </div>
     <option-menu v-for="optionMenu in itemMenu.optionMenus" :key=optionMenu.id :optionMenu=optionMenu :order=order />
     <div class="item-menu__form">
-      <counter @onClickAdd="onClickAdd" @onClickReduce="onClickReduce" />
+      <counter @onClickAdd="onClickAdd" @onClickReduce="onClickReduce" :count=order.count />
     </div>
   </div>
       <close-icon class="item-modal__right__close" />
       <div class="item-submit">
-        <counter class="item-submit__counter" @onClickAdd="onClickAdd" @onClickReduce="onClickReduce" />
+        <counter class="item-submit__counter" @onClickAdd="onClickAdd" @onClickReduce="onClickReduce" :count=order.count />
         <add-cart-button class="item-submit__button" :order=order />
       </div>
     </div>

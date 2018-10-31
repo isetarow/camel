@@ -7,7 +7,7 @@
       </svg>
     </button>
     <div class="counter__count">
-      {{ order.count }}
+      {{ count }}
     </div>
     <button @click="$emit('onClickAdd')">
       <svg viewBox="0 0 64 64">
@@ -21,6 +21,7 @@
 <script>
   export default {
     name: 'Counter',
+    props:['count'],
   }
 </script>
 

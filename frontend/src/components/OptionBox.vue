@@ -21,7 +21,6 @@
     props:[
       'type',
       'option',
-      'order'
     ],
     computed: {
       repletionPrice: function() {
