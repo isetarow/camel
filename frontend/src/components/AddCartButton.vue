@@ -44,9 +44,6 @@
     border-color: #3e9920;
     border-radius: 2px;
     background: #3e9920;
-    transition: all 400ms ease;
-    -webkit-transition: all 400ms ease;
-    -moz-transition: all 400ms ease;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     cursor: pointer;

@@ -26,8 +26,5 @@
     background: rgba(38, 38, 38, 0.8);
     z-index: 7;
     opacity: 1;
-    transition: opacity 300ms ease 0s;
-    -webkit-overflow-scrolling: touch;
-    -webkit-transition: opacity 300ms ease;
   }
 </style>

@@ -73,7 +73,6 @@
         border-color: #ffffff;
         border-image: initial;
         box-shadow: #e0e0e0 0px 0px 0px 1px;
-        transition: all 400ms ease 0s;
       }
     }
     .checkbox::before{

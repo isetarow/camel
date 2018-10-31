@@ -18,9 +18,6 @@
     align-items: center;
     -webkit-box-align: center;
     padding: 8px;
-    transition: all 400ms ease;
-    -webkit-transition: all 400ms ease;
-    -moz-transition: all 400ms ease;
     fill: #262626;
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
