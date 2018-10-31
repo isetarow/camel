@@ -6,7 +6,7 @@
     <global-nav :categories=categories />
     <shop-header :shopDetail=shopDetail />
     <menu-list :items=items :categories=categories />
-    <overlay>
+    <overlay v-show=false >
       <item-modal/>
     </overlay>
   </div>
