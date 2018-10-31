@@ -1,18 +1,30 @@
 <template>
-  <button class="add-cart-button" type="button">
+  <button @click="clickAddCartHandler" class="add-cart-button" type="button">
     <div class="add-cart-button__text">
       カートに{{ order.count }}つ追加する
       <span class="add-cart-button__text__price">
-        {{ order.priceSum }}円
+        {{ order.subTotal }}円
       </span>
     </div>
   </button>
 </template>
 
 <script>
+  import {
+    mapActions
+  } from 'vuex'
+
   export default {
     name: 'AddCartButton',
-    props:['order'],
+    props: ['order'],
+    methods: {
+      ...mapActions('orders', [
+        'addOrder'
+      ]),
+      clickAddCartHandler: function(event) {
+        this.addOrder(this.order)
+      }
+    }
   }
 </script>
 

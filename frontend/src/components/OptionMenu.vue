@@ -6,30 +6,31 @@
           {{ optionMenu.header }}
         </div>
         <div class="option-menu__header__left__repletion">
-          (1 つ選択)
+          ({{ optionMenu.repletion }})
         </div>
       </div>
       <div class="option-menu__header__right">
         <div>
-          必須
+          {{ optionMenu.isRequired ? "必須" : "" }}
         </div>
       </div>
     </div>
     <div class="option-menu__content">
-      <radio-option v-if="optionMenu.type === 'radio'" v-for="option in optionMenu.options" :key=option.header :option=option></radio-option>
-      <check-option v-if="optionMenu.type === 'check'" v-for="option in optionMenu.options" :key=option.header :option=option></check-option>
+      <option-box :type=optionMenu.type v-for="option in optionMenu.options" :key=option.label :option=option :order=order />
     </div>
   </div>
 </template>
 
 <script>
-import RadioOption from '@/components/RadioOption'
-import CheckOption from '@/components/CheckOption'
+import OptionBox from '@/components/OptionBox'
 
   export default {
     name: 'OptionMenu',
-    components: { RadioOption, CheckOption },
-    props:['optionMenu'],
+    components: { OptionBox },
+    props:[
+      'optionMenu',
+      'order'
+    ],
   }
 </script>
 

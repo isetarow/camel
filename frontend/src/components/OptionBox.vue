@@ -1,18 +1,15 @@
 <template>
-  <div class="radio-option">
-    <input class="radio-option__radio" type="radio">
-    <label for="option-26aa27ac-a168-49ad-8929-5405f21218c7-b8abdd4f-094e-483f-886c-6241f6844378-">
-      <div class="radio-option__text">
+  <div class="option-box">
+    <input :type=type >
+    <label :class="type" for="option-26aa27ac-a168-49ad-8929-5405f21218c7-b8abdd4f-094e-483f-886c-6241f6844378-">
+      <div class="option-box__text">
         {{ option.label }}
       </div>
-      <div v-if="option.isSoldOut" class="radio-option__soldout">
+      <div v-if="option.isSoldOut" class="option-box__soldout">
         売り切れ
       </div>
-      <div v-else-if="option.additionalCosts>0" class="radio-option__repletion">
-        + ￥{{ option.additionalCosts }}
-      </div>
-      <div v-else-if="option.additionalCosts<0" class="radio-option__repletion">
-        - ￥{{ option.additionalCosts * -1}}
+      <div v-else class="option-box__repletion">
+        {{ repletionPrice(option.additionalCosts) }}
       </div>
     </label>
   </div>
@@ -20,17 +17,35 @@
 
 <script>
   export default {
-    name: 'RadioOption',
-    props:['option'],
+    name: 'OptionBox',
+    props:[
+      'type',
+      'option',
+      'order'
+    ],
+    computed: {
+      repletionPrice: function() {
+        return function(additionalCosts){
+          var repletion
+          if(additionalCosts < 0){
+            repletion = "- ￥" + String(additionalCosts * -1 )
+          }else if(additionalCosts > 0){
+            repletion = "+ ￥" + String(additionalCosts)
+          }else{
+            repletion = ""
+          }
+          return repletion
+        }
+      }
+    }
   }
-
 </script>
 
 <style lang="scss" scoped>
-  .radio-option {
+  .option-box {
     padding: 12px 0px;
     display: flex;
-    &__radio {
+    input {
       display: none;
     }
     label {
@@ -53,7 +68,6 @@
         vertical-align: middle;
         margin-right: 12px;
         flex-shrink: 0;
-        border-radius: 50%;
         border-width: 4px;
         border-style: solid;
         border-color: #ffffff;
@@ -62,6 +76,13 @@
         transition: all 400ms ease 0s;
       }
     }
+    .checkbox::before{
+      border-radius: 2px;
+    }
+    .radio::before{
+      border-radius: 50%;
+    }
+
     &__soldout {
       color: #FFFFFF;
       min-width: 4.6rem;
