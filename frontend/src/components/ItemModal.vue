@@ -21,7 +21,7 @@
       <counter @onClickAdd="onClickAdd" @onClickReduce="onClickReduce" :count=order.count />
     </div>
   </div>
-      <close-icon class="item-modal__right__close" />
+      <close-icon class="item-modal__right__close" @onClickClose="$emit('onClickClose')"/>
       <div class="item-submit">
         <counter class="item-submit__counter" @onClickAdd="onClickAdd" @onClickReduce="onClickReduce" :count=order.count />
         <add-cart-button class="item-submit__button" :order=order />
@@ -48,7 +48,9 @@
       CloseIcon,
       Counter,
     },
+    props:['itemId'],
     computed: {
+      //itemIdをキーにItemDetailをgetする処理に書き換え必要
       ...mapState('itemDetail', [
         'itemMenu',
         'order',

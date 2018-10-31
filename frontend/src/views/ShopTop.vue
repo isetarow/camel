@@ -5,9 +5,9 @@
     <button @click="clickAddItemHandler">Add item</button>
     <global-nav :categories=categories />
     <shop-header :shopDetail=shopDetail />
-    <menu-list :items=items :categories=categories />
-    <overlay v-show=false >
-      <item-modal/>
+    <menu-list :items=items :categories=categories @onClickItem="onClickItem" />
+    <overlay v-show=showItemModal >
+      <item-modal  :itemId=itemId @onClickClose="onClickClose"/>
     </overlay>
   </div>
 </template>
@@ -35,6 +35,12 @@
       Overlay,
       ItemModal,
     },
+    data() {
+      return {
+        itemId: -1,
+        showItemModal: false,
+      }
+    },
     computed: {
       ...mapState('shop', [
         'shopDetail',
@@ -54,6 +60,13 @@
           count: 2,
           subTotal: 20,
         })
+      },
+      onClickItem: function(itemId) {
+        this.itemId = itemId
+        this.showItemModal = true
+      },
+      onClickClose: function(event) {
+        this.showItemModal = false
       }
     }
   }
