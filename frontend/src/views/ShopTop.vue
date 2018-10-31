@@ -6,6 +6,9 @@
     <global-nav :categories=categories />
     <shop-header :shopDetail=shopDetail />
     <menu-list :items=items :categories=categories />
+    <overlay v-show=false >
+      <item-modal/>
+    </overlay>
   </div>
 </template>
 
@@ -14,22 +17,23 @@
     mapState,
     mapActions
   } from 'vuex'
-  
+
   import ShopHeader from '@/components/ShopHeader'
   import MenuList from '@/components/MenuList'
   import GlobalNav from '@/components/GlobalNav'
   import Logo from '@/components/Logo'
-  
-  // mock data
-  import shop from '@/mockData/Shop'
-  
+  import Overlay from '@/components/Overlay'
+  import ItemModal from '@/components/ItemModal'
+
   export default {
     name: 'ShopTop',
     components: {
       ShopHeader,
       MenuList,
       GlobalNav,
-      Logo
+      Logo,
+      Overlay,
+      ItemModal,
     },
     computed: {
       ...mapState('shop', [
@@ -57,5 +61,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-  
+
 </style>
