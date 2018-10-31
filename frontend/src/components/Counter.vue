@@ -1,6 +1,6 @@
 <template>
   <div class="counter">
-    <button @click="reduceCount">
+    <button @click="$emit('onClickReduce')">
       <svg viewBox="0 0 64 64">
         <path d="M55 36H9a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h46a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1z">
         </path>
@@ -9,7 +9,7 @@
     <div class="counter__count">
       {{ order.count }}
     </div>
-    <button @click="addCount">
+    <button @click="$emit('onClickAdd')">
       <svg viewBox="0 0 64 64">
         <path d="M56 29v6a1 1 0 0 1-1 1H36v19a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1V36H9a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h19V9a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v19h19a1 1 0 0 1 1 1z">
         </path>
@@ -21,19 +21,6 @@
 <script>
   export default {
     name: 'Counter',
-    props: ['order'],
-    methods: {
-      addCount: function() {
-        this.order.count += 1
-        this.order.subTotal += this.order.price
-      },
-      reduceCount: function() {
-        if(this.order.count > 1){
-          this.order.count -= 1
-          this.order.subTotal -= this.order.price
-        }
-      },
-    }
   }
 </script>
 
