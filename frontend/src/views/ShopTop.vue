@@ -9,6 +9,7 @@
     <overlay v-show=false >
       <item-modal/>
     </overlay>
+    <order-confirm-button v-if="orderItems.length > 0" :orderItems=orderItems :orderTotal=orderTotal />
   </div>
 </template>
 
@@ -24,6 +25,7 @@
   import Logo from '@/components/Logo'
   import Overlay from '@/components/Overlay'
   import ItemModal from '@/components/ItemModal'
+  import OrderConfirmButton from '@/components/OrderConfirmButton'
 
   export default {
     name: 'ShopTop',
@@ -34,14 +36,15 @@
       Logo,
       Overlay,
       ItemModal,
+      OrderConfirmButton,
     },
-    computed: {
-      ...mapState('shop', [
-        'shopDetail',
-        'categories',
-        'items',
-      ])
-    },
+    computed: mapState({
+      shopDetail: state => state.shop.shopDetail,
+      categories: state => state.shop.categories,
+      items: state => state.shop.items,
+      orderItems: state => state.orders.items,
+      orderTotal: state => state.orders.total
+    }),
     methods: {
       ...mapActions('orders', [
         'addOrder'
