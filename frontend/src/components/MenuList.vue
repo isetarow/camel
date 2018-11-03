@@ -50,6 +50,7 @@
   }
   .menu-list {
     text-align: left;
+    margin-bottom: 48px;
     &__category {
       padding: 0 16px;
       &__name {
