@@ -48,6 +48,7 @@
     width: 100%;
     min-width: 120px;
     height: 48px;
+    outline: none;
     &__contents {
       padding:8px 16px;
       align-items: center;
