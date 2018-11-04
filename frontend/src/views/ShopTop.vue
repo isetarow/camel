@@ -3,19 +3,20 @@
   <div class="shop-top">
     <logo/>
     <button @click="clickAddItemHandler">Add item</button>
-    <global-nav :categories=categories />
-    <shop-header :shopDetail=shopDetail />
-    <menu-list :items=items :categories=categories @onClickItem="onClickItem" />
+    <global-nav />
+    <shop-header />
+    <menu-list @onClickItem="onClickItem" />
     <overlay v-show=showItemModal >
       <item-modal  :itemId=itemId @onClickClose="onClickClose"/>
     </overlay>
+    <order-confirm-button v-if=hasOrder />
   </div>
 </template>
 
 <script>
   import {
-    mapState,
-    mapActions
+    mapActions,
+    mapGetters
   } from 'vuex'
 
   import ShopHeader from '@/components/ShopHeader'
@@ -24,9 +25,15 @@
   import Logo from '@/components/Logo'
   import Overlay from '@/components/Overlay'
   import ItemModal from '@/components/ItemModal'
+  import OrderConfirmButton from '@/components/OrderConfirmButton'
 
   export default {
     name: 'ShopTop',
+    computed: {
+      ...mapGetters('orders', [
+        'hasOrder'
+      ])
+    },
     components: {
       ShopHeader,
       MenuList,
@@ -34,19 +41,13 @@
       Logo,
       Overlay,
       ItemModal,
+      OrderConfirmButton,
     },
     data() {
       return {
         itemId: -1,
         showItemModal: false,
       }
-    },
-    computed: {
-      ...mapState('shop', [
-        'shopDetail',
-        'categories',
-        'items',
-      ])
     },
     methods: {
       ...mapActions('orders', [

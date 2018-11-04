@@ -21,10 +21,17 @@
 </template>
 
 <script>
+  import {
+    mapState,
+  } from 'vuex'
+
   export default {
     name: 'MenuList',
-    props: ['items', 'categories'],
     computed: {
+      ...mapState('shop', [
+        'categories',
+        'items'
+      ]),
       sortedCategory: function() {
         return this.categories
       },
@@ -50,6 +57,7 @@
   }
   .menu-list {
     text-align: left;
+    margin-bottom: 48px;
     &__category {
       padding: 0 16px;
       &__name {
