@@ -6,7 +6,7 @@
           <h2>{{ category.name }}</h2>
         </div>
         <ul>
-          <li v-for="item in filtedItem(category.id)" :key=item.id class="menu-list__category__item">
+          <li v-for="item in filtedItem(category.id)" :key=item.id class="menu-list__category__item" @click="$emit('onClickItem',item.id)" >
             <div class="menu-list__category__item__contents">
               <p class="menu-list__category__item__contents__name">{{item.itemName}}</p>
               <p class="menu-list__category__item__contents__description">{{item.itemDescription}}</p>
