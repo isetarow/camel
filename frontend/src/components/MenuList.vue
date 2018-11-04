@@ -21,10 +21,17 @@
 </template>
 
 <script>
+  import {
+    mapState,
+  } from 'vuex'
+
   export default {
     name: 'MenuList',
-    props: ['items', 'categories'],
     computed: {
+      ...mapState('shop', [
+        'categories',
+        'items'
+      ]),
       sortedCategory: function() {
         return this.categories
       },

@@ -17,9 +17,17 @@
 </template>
 
 <script>
+  import {
+    mapState,
+  } from 'vuex'
+
 export default {
   name: 'ShopHeader',
-  props: ['shopDetail'],
+  computed: {
+    ...mapState('shop', [
+      'shopDetail'
+    ])
+  }
 }
 </script>
 
