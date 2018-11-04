@@ -10,13 +10,20 @@
 
 
 <script>
+  import {
+    mapState
+  } from 'vuex'
+
   export default {
     name: 'OrderConfirmButton',
-    props: ['orderItems', 'orderTotal'],
     computed: {
+      ...mapState('orders', [
+        'total',
+        'items'
+      ]),
       totalWithCurrency: function() {
         return function() {
-            return '￥' + this.orderTotal
+            return '￥' + this.total
         }
       },
       confirmCart: function() {
@@ -26,7 +33,7 @@
       },
       countOrderItems: function() {
         return function() {
-          return this.orderItems.length
+          return this.items.length
         }
       }
     }
@@ -48,6 +55,7 @@
     width: 100%;
     min-width: 120px;
     height: 48px;
+    outline: none;
     &__contents {
       padding:8px 16px;
       align-items: center;

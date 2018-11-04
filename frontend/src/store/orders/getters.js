@@ -9,5 +9,8 @@ export default {
         return order.id === Number(id);
       });
       return order[0];
+    },
+    hasOrder: state => {
+      return state.items.length > 0;
     }
   };

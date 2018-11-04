@@ -3,20 +3,20 @@
   <div class="shop-top">
     <logo/>
     <button @click="clickAddItemHandler">Add item</button>
-    <global-nav :categories=categories />
-    <shop-header :shopDetail=shopDetail />
-    <menu-list :items=items :categories=categories />
-    <overlay v-show=false >
-      <item-modal/>
+    <global-nav />
+    <shop-header />
+    <menu-list @onClickItem="onClickItem" />
+    <overlay v-show=showItemModal >
+      <item-modal  :itemId=itemId @onClickClose="onClickClose"/>
     </overlay>
-    <order-confirm-button v-if="orderItems.length > 0" :orderItems=orderItems :orderTotal=orderTotal />
+    <order-confirm-button v-if=hasOrder />
   </div>
 </template>
 
 <script>
   import {
-    mapState,
-    mapActions
+    mapActions,
+    mapGetters
   } from 'vuex'
 
   import ShopHeader from '@/components/ShopHeader'
@@ -29,6 +29,11 @@
 
   export default {
     name: 'ShopTop',
+    computed: {
+      ...mapGetters('orders', [
+        'hasOrder'
+      ])
+    },
     components: {
       ShopHeader,
       MenuList,
@@ -38,13 +43,12 @@
       ItemModal,
       OrderConfirmButton,
     },
-    computed: mapState({
-      shopDetail: state => state.shop.shopDetail,
-      categories: state => state.shop.categories,
-      items: state => state.shop.items,
-      orderItems: state => state.orders.items,
-      orderTotal: state => state.orders.total
-    }),
+    data() {
+      return {
+        itemId: -1,
+        showItemModal: false,
+      }
+    },
     methods: {
       ...mapActions('orders', [
         'addOrder'
@@ -57,6 +61,13 @@
           count: 2,
           subTotal: 20,
         })
+      },
+      onClickItem: function(itemId) {
+        this.itemId = itemId
+        this.showItemModal = true
+      },
+      onClickClose: function(event) {
+        this.showItemModal = false
       }
     }
   }

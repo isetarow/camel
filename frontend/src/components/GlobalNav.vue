@@ -9,10 +9,16 @@
 </template>
 
 <script>
+  import {
+    mapState,
+  } from 'vuex'
+
   export default {
     name: 'GlobalNav',
-    props: ['categories'],
     computed: {
+      ...mapState('shop', [
+        'categories',
+      ]),
       sortedCategory: function() {
         return this.categories
       }
